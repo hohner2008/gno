@@ -20,7 +20,7 @@ RUN         --mount=type=cache,target=/root/.cache/go-build       go build -C ./
 RUN         --mount=type=cache,target=/root/.cache/go-build       go build -C ./misc/autocounterd -o /gnoroot/build/autocounterd ./cmd
 
 # Base image
-FROM        alpine:3.17 AS base
+FROM        alpine:3.18.12 AS base
 WORKDIR     /gnoroot
 ENV         GNOROOT="/gnoroot"
 RUN         apk add --no-cache ca-certificates
